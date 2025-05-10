@@ -27,10 +27,6 @@ class ConversionRepositoryImpl: ConversionRepository {
                 request.fromUnit,
                 request.toUnit
             )
-
-            UnitType.Length -> TODO()
-            UnitType.Mass -> TODO()
-            UnitType.Temperature -> TODO()
         }
 
         return ConversionResult(
@@ -106,12 +102,5 @@ class ConversionRepositoryImpl: ConversionRepository {
             MeasureUnit.OUNCE -> kilograms / 0.0283495231
             else -> throw IllegalArgumentException("Unsupported mass unit: $toUnit")
         }
-    }
-
-    // Helper method to format for display if needed
-    fun formatMeasure(value: Double, unit: MeasureUnit, locale: ULocale = ULocale.getDefault()): String {
-        val measure = Measure(value, unit)
-        val formatter = MeasureFormat.getInstance(locale, MeasureFormat.FormatWidth.SHORT)
-        return formatter.format(measure)
     }
 }

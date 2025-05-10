@@ -19,11 +19,6 @@ fun UnitDropdown(
     modifier: Modifier = Modifier
 ) {
     var expanded by remember { mutableStateOf(false) }
-    val measureFormat = MeasureFormat.getInstance(
-        ULocale.getDefault(),
-        MeasureFormat.FormatWidth.WIDE
-    )
-
     ExposedDropdownMenuBox(
         expanded = expanded,
         onExpandedChange = { expanded = it },

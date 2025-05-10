@@ -1,13 +1,12 @@
 package com.example.simpleunitconverterapp.presentation.screens
 
-
 import android.icu.text.MeasureFormat
 import android.icu.util.Measure
 import android.icu.util.ULocale
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -63,7 +62,7 @@ fun ConverterScreen(viewModel: ConverterViewModel) {
                 modifier = Modifier.padding(horizontal = 8.dp)
             ) {
                 Icon(
-                    imageVector = Icons.Default.KeyboardArrowDown,
+                    imageVector = Icons.Default.Menu,
                     contentDescription = "Swap Units"
                 )
             }
